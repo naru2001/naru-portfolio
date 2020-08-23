@@ -1,0 +1,52 @@
+header {
+    background: rgb(233, 205, 154);
+    padding: 0.5rem;
+    text-align: right;
+  }
+
+  .top{
+      text-align: left;
+      float: left;
+      color: rgb(0, 0, 0);
+      font-size: 30px;
+      line-height: 1.3;
+  }
+  a {
+    color: #fff;
+    text-decoration: none;
+    white-space: nowrap;
+  }
+  li {
+    margin: 1.5rem;
+  }
+
+  ul {
+    list-style: none;
+  }
+  /* ボタン */
+  .menu-btn {
+    border: 1px solid #999;
+    background-color: black;
+    color: #fff;
+    padding: .5rem 1rem;
+    font-size: 1rem;
+    cursor: pointer;
+    line-height: 1;
+  }
+   
+  /* メニュー */
+  nav {
+    background: #0bd;
+    position: absolute;
+    z-index: 1;
+    top: 3.6rem;
+    right: 0;
+    overflow-x: hidden;
+    text-align: center;
+    width: 0;
+    transition: .7s;
+  }
+
+  nav.open-menu{
+      width: 40%;
+  }
