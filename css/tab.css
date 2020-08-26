@@ -1,0 +1,42 @@
+.tabmenu{
+    width: 700px;
+    margin: auto;
+  flex-wrap: wrap;
+  display: flex;
+}
+
+.tabmenu.open-menu{
+    width: 70%;
+}
+
+.tab_class{
+    width: calc(95%/3);
+    height: 50px;
+    background-color: rgb(255, 242, 168);
+    line-height: 50px;
+    font-size: 20px;
+    text-align: center;
+    display: block;
+    float: left;
+    order: -1;
+    font-family: 'Kosugi Maru', sans-serif;
+    border:2px solid #000000;
+}
+
+input[name="tab_name"] {
+    display: none;
+  }
+
+  input:checked + .tab_class {
+    background-color: rgb(15, 23, 24);
+    color: rgb(255, 255, 255);
+  }
+   
+  .content{
+    display: none;
+    width: 100%;
+  }
+   
+  input:checked + .tab_class + .content{
+    display: block;
+  }
