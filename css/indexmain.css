@@ -75,3 +75,8 @@ header {
     font-weight: bolder;
     line-height: 1.6;
   }
+
+  .ac-his{
+    font-size: 18px;
+    padding-top: 7px;
+  }
