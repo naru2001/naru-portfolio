@@ -35,6 +35,7 @@ input[name="tab_name"] {
   .content{
     display: none;
     width: 100%;
+    height: 700px;
   }
    
   input:checked + .tab_class + .content{
