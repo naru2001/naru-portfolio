@@ -1,38 +1,39 @@
-.ue{
-  padding-bottom: 7px;
+.ue {
+    padding-bottom: 7px;
 }
 
 header {
-    background:wheat;
+    background: wheat;
     padding: 0.5rem;
     text-align: right;
-  }
+}
 
-  .top{
+.top {
     text-align: left;
     float: left;
     font-size: 30px;
     line-height: 1.3;
-    font-family: 'Kosugi Maru', sans-serif;;
-  }
+    font-family: 'Kosugi Maru', sans-serif;
+    ;
+}
 
-  .menulist {
+.menulist {
     color: #fff;
     text-decoration: none;
     white-space: nowrap;
     font-size: 1.3rem;
     padding-right: 10px;
-  }
+}
 
-  .menuli {
+.menuli {
     margin: 1.5rem;
-  }
+}
 
-  .menuul {
+.menuul {
     list-style: none;
-  }
+}
 
-  .menu-btn {
+.menu-btn {
     border: 1px solid #999;
     background-color: black;
     color: #fff;
@@ -41,9 +42,9 @@ header {
     cursor: pointer;
     line-height: 1;
     border-radius: 7px;
-  }
-   
-  nav {
+}
+
+nav {
     background: #0bd;
     position: absolute;
     z-index: 1;
@@ -53,29 +54,29 @@ header {
     text-align: center;
     width: 0;
     transition: .7s;
-  }
+}
 
-  nav.open-menu{
-      width: 280px;
-  }
+nav.open-menu {
+    width: 280px;
+}
 
-  main{
+main {
     padding: 5px;
     margin-bottom: 10px;
     border: 5px double #000000;
-  }
+}
 
-  main.open-menu{
+main.open-menu {
     width: 65%;
-  }
+}
 
-  .hobbylec{
+.hobbylec {
     font-family: 'Kosugi Maru', sans-serif;
     font-weight: bolder;
     line-height: 1.6;
-  }
+}
 
-  .ac-his{
+.ac-his {
     font-size: 18px;
     padding-top: 7px;
-  }
+}
