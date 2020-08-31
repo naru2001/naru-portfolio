@@ -11,13 +11,29 @@
     <script type="text/javascript"
         src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-AMS_CHTML"></script>
     <script type="text/x-mathjax-config">
-        MathJax.Hub.Config({ displayAlign: "left", displayIndent: "0.6em" ,CommonHTML:{scale:250}});
+        MathJax.Hub.Config({ 
+            displayAlign: "left", displayIndent: "1em" ,
+            CommonHTML:{scale:250},
+            "HTML-CSS": {
+                availableFonts: ["TeX"],
+                undefinedFamily: "'Raleway', Helvetica, Arial, sans-serif"
+            },
+            tex2jax: {
+                inlineMath: [['$','$'],['\\(','\\)']]
+            },
+            TeX: {
+                Macros: {
+                  ssqrt: ['\\sqrt{\\smash[b]{\\mathstrut #1}}', 1]
+                }
+              }
+        });
     </script>
 </head>
 
 <body>
     <main style="font-family: 'Kosugi Maru', sans-serif;">
         <div>
+            <h2>ベクトルの表記</h2>
             縦ベクトルは以下の形式で与えられる。 \[ A= \begin{pmatrix} 1\\2 \end{pmatrix} \]
             横ベクトルは以下のように表される。\[ B= \begin{pmatrix} 3 \ \ 4 \end{pmatrix} \]
             ベクトルの転地を \[A^{T}=\begin{pmatrix} 1 \ \ 2 \end{pmatrix}\]
@@ -25,13 +41,53 @@
             この章でベクトルはこれ以降
             \[
             A= \begin{pmatrix} A_{1}\\A_{2} \\ \vdots \\ A_{n} \end{pmatrix}
-             \hspace{2em}
+            \hspace{2em}
             B= \begin{pmatrix} B_{1}\\B_{2} \\ \vdots \\ B_{n} \end{pmatrix}
             \]
             を用いる．
         </div>
         <div>
             <h2>ベクトルの和</h2>
+            $A$と$B$のベクトルの和$C$は以下のように求めることができる。
+            \[
+            C=A+B=
+            \begin{pmatrix}
+            A_{1}+B_{1} \\ A_{2}+B_{2} \\ \vdots \\ A_{n}+B_{n} \\
+            \end{pmatrix}
+            \]
+            またベクトルの差$A-B$は$A+(-B)$とベクトルの和として計算できる。ここで
+            \[
+            -B=
+            \begin{pmatrix}
+            -B_{1} \\ -B_{2} \\ \vdots \\ -B_{n} \\
+            \end{pmatrix}
+            \]
+            である。
+        </div>
+        <div>
+            <h3>スカラー倍</h3>
+            $A$のスカラー倍$mA$は以下のように求めることができる。
+            \[
+            mA=
+            \begin{pmatrix}
+            mA_{1} \\ mA_{2} \\ \vdots \\ mA_{n} \\
+            \end{pmatrix}
+            \]
+        </div>
+        <div>
+            <h3>内積</h3>
+            ベクトルの内積$A \cdot B$は
+            \[
+            A \cdot B= \sum_{i=1}^{n} A_{i} \cdot B_{i}
+            \]
+        </div>
+        <div>
+            <h3>ベクトルの大きさ</h3>
+            $A$のベクトルの大きさ$|A|$は
+            \[
+            |A| =\sqrt { \sum_{{i=1}}^{\smash n} {a_{i}}^{2}}
+            \]
+            である。
         </div>
     </main>
 </body>
