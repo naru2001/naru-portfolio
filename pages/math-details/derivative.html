@@ -1,1 +1,119 @@
 <!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="format-detection" content="telephone=no,address=no,email=no">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&family=Kosugi+Maru&display=swap');
+    </style>
+    <link rel="stylesheet" href="../../css/mathes.css">
+    <script type="text/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-AMS_CHTML"></script>
+    <script type="text/x-mathjax-config">
+            MathJax.Hub.Config({ 
+                displayAlign: "left", displayIndent: "1em" ,
+                CommonHTML:{scale:250},
+                "HTML-CSS": {
+                    availableFonts: ["TeX"],
+                    undefinedFamily: "'Raleway', Helvetica, Arial, sans-serif"
+                },
+                tex2jax: {
+                    inlineMath: [['$','$'],['\\(','\\)']]
+                },
+                TeX: {
+                    Macros: {
+                      ssqrt: ['\\sqrt{\\smash[b]{\\mathstrut #1}}', 1]
+                    }
+                  }
+            });
+        </script>
+</head>
+
+<body>
+    <main style="font-family: 'Kosugi Maru', sans-serif;">
+        <div>
+            <h2>微分</h2>
+            $f(x)=x^{n}$の微分
+            \[ \frac{df}{dx}=nx^{n-1} \]
+            である。
+        </div>
+        <div>
+            <h2>連鎖律</h2>
+            複数の関数からなる合成関数$f(g(x))$には
+            \[ \frac{df}{dx}=\frac{df}{dg} \cdot \frac{dg}{dx} \]
+            という関係が成り立つ。
+            \[ex)\]
+            \[
+            \begin{cases}
+            f=\log{g} \\
+            g=\cos{x}
+            \end{cases}
+            \]
+            が与えられる。この時の$f'(g(x))$を知りたい。
+            \[
+            \frac{df}{dg}=\frac{1}{g} \hspace{2em}
+            \frac{dg}{dx}=-\sin{x}
+            \]
+            である。よって連鎖律を用いて
+            \[
+            \begin{split}
+            \frac{df}{dx} &= \frac{1}{g} \cdot -\sin{x} \\
+            &= -\frac{\sin{x}}{\cos{x}} \\
+            &= -\tan{x}
+            \end{split}
+            \]
+        </div>
+        <div>
+            <h2>偏微分</h2>
+            2変数関数$f(w,z)=w^2+2wz+4z+1$において、
+            \[ \frac{\partial f}{\partial w}=2w+2z \]
+            \[ \frac{\partial f}{\partial z}=2w+4 \]
+            である。
+        </div>
+        <div>
+            <h2>偏微分の連鎖律</h2>
+            2変数以上の合成関数にも連鎖律は成り立つ。<br>
+            n個の内部関数からなる合成関数$f(g_{0}(w,z),g_{1}(w,z),\dots,g_{n-1}(w,z))$の偏微分はそれぞれ
+            \[
+            \frac{\partial f}{\partial w}=
+            \sum_{i=0}^{n-1} \frac{\partial f}{\partial g_{i}} \cdot \frac{\partial g_{i}}{\partial w}
+            \]
+            である。
+            $ex)$
+            $f(w,z)=(w+2z-1)^2$が与えられる。ここで
+            \[
+            \begin{cases}
+            w=g_{0}+2g_{1}+1 \\
+            z=2g_{0}+3g_{1}-1
+            \end{cases}
+            \]
+            である。この時の
+            <span style="font-size: 20px;">$\frac{\partial f}{\partial g_{0}}$</span>
+            を求めたい。
+            \[
+            \frac{\partial f}{\partial g_{0}}=
+            \frac{\partial f}{\partial w} \cdot \frac{\partial w}{\partial g_{0}}+
+            \frac{\partial f}{\partial z} \cdot \frac{\partial z}{\partial g_{0}}
+            \]
+            ここで
+            \[
+            \begin{split}
+            \frac{\partial f}{\partial w} &=2(w+2z-1) \\
+            \frac{\partial w}{\partial g_{0}} &=1 \\
+            \frac{\partial f}{\partial z} &=2(w+2z-1) \cdot 2 =4(w+2z-1) \\
+            \frac{\partial z}{\partial g_{0}} &= 2
+            \end{split}
+            \]
+            よって
+            \[
+            \begin{split}
+            &2(w+2z-1) \cdot 1 + 4(w+2z-1) \cdot 2 \\
+            &= 10(w+2z-1)
+            \end{split}
+            \]
+            となる。
+        </div>
+    </main>
+</body>
+</html>
