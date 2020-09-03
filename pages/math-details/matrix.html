@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="format-detection" content="telephone=no,address=no,email=no">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&family=Kosugi+Maru&display=swap');
+    </style>
+    <link rel="stylesheet" href="../../css/mathes.css">
+    <script type="text/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-AMS_CHTML"></script>
+    <script type="text/x-mathjax-config">
+                MathJax.Hub.Config({ 
+                    displayAlign: "left", displayIndent: "1em" ,
+                    CommonHTML:{scale:250},
+                    "HTML-CSS": {
+                        availableFonts: ["TeX"],
+                        undefinedFamily: "'Raleway', Helvetica, Arial, sans-serif"
+                    },
+                    tex2jax: {
+                        inlineMath: [['$','$'],['\\(','\\)']]
+                    },
+                    TeX: {
+                        Macros: {
+                          ssqrt: ['\\sqrt{\\smash[b]{\\mathstrut #1}}', 1]
+                        }
+                      }
+                });
+            </script>
+</head>
+
+<body>
+
+    <main style="font-family: 'Kosugi Maru', sans-serif;">
+        <div>
+            <h2>行列積</h2>
+            2つの行列$A,B$が与えられる。この行列積$C$の$C_{ij}$の要素は
+            \[ C_{ij}=\sum_{m=0}^{M-1} A_{im} \cdot B_{mj} \]
+            である。ここで、
+            \[ AB \ne BA \]
+            である。
+        </div>
+        <div>
+            <h2>逆行列</h2>
+            $AA^{-1}=1$となる行列をAの逆行列という。<br>
+            $2 \times 2 $の行列
+            \[ A= \begin{pmatrix} a & b \\ c & d \\ \end{pmatrix} \]
+            の逆行列
+            \[ A^{-1} = \frac{1}{ad-bc} \begin{pmatrix} d & -b \\ -c & a \end{pmatrix} \]
+            である。
+        </div>
+        <div>
+            <h2>転置</h2>
+            行列$A$の転置行列$A^T$は$A$の行と列を入れ替えたものである。
+            ここで
+            \[
+            \begin{cases}
+            (AB)^T=B^TA^T \\
+            (ABC)^T=C^T(AB)^T=C^TB^TA^T
+            \end{cases}
+            \]
+            である。
+            \[ex)\]
+            \[
+            A= \begin{pmatrix} 1 & 2 & 3 \\ 4 & 5 & 6 \end{pmatrix}
+            \hspace{2em}
+            B= \begin{pmatrix} 2 & 8 \\ 4 & 10 \\ 6 & 12 \end{pmatrix}
+            \]
+            の時、
+            \[
+            \begin{split}
+            (AB)^T &= \left(
+            \begin{pmatrix} 1 & 2 & 3 \\ 4 & 5 & 6  \end{pmatrix}
+            \begin{pmatrix} 2 & 8 \\ 4 & 10 \\ 6 & 12 \end{pmatrix}
+            \right)^T \\
+            &= \begin{pmatrix} 34 & 44 & 54 \\ 44 & 58 & 72 \\ 54 & 72 & 90  \end{pmatrix} \\
+            B^TA^T &= 
+            \begin{pmatrix} 1 & 4 \\ 2 & 5 \\ 3 & 6 \end{pmatrix}
+            \begin{pmatrix} 2 & 4 & 6 \\ 8 & 10 & 12 \end{pmatrix} \\
+            &= \begin{pmatrix} 34 & 44 & 54 \\ 44 & 58 & 72 \\ 54 & 72 & 90 \end{pmatrix}
+            \end{split}
+            \]
+            である。
+        </div>
+    </main>
+
+</body>
+
+</html>
