@@ -1,8 +1,9 @@
 .tabmenu{
-    width: 700px;
+    width: 90%;
     margin: auto;
   flex-wrap: wrap;
   display: flex;
+  padding-left: 25px;
 }
 
 .tabmenu.open-menu{
@@ -10,7 +11,7 @@
 }
 
 .tab_class{
-    width: calc(95%/3);
+    width: calc(95%/4);
     height: 50px;
     background-color: rgb(255, 242, 168);
     line-height: 50px;

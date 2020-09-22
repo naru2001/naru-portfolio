@@ -80,3 +80,7 @@ main.open-menu {
     font-size: 18px;
     padding-top: 7px;
 }
+
+a{
+    text-decoration: none;
+}
