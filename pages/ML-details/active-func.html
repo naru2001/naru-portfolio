@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+
+<html>
+
+    <head>
+        <meta charset="utf-8">
+        <meta name="format-detection" content="telephone=no,address=no,email=no">
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&family=Kosugi+Maru&display=swap');
+        </style>
+        <link rel="stylesheet" href="../../css/mathes.css">
+        <script type="text/javascript"
+            src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-AMS_CHTML"></script>
+        <script type="text/x-mathjax-config">
+                    MathJax.Hub.Config({ 
+                        displayAlign: "left", displayIndent: "1em" ,
+                        CommonHTML:{scale:250},
+                        "HTML-CSS": {
+                            availableFonts: ["TeX"],
+                            undefinedFamily: "'Raleway', Helvetica, Arial, sans-serif"
+                        },
+                        tex2jax: {
+                            inlineMath: [['$','$'],['\\(','\\)']]
+                        },
+                        TeX: {
+                            Macros: {
+                              ssqrt: ['\\sqrt{\\smash[b]{\\mathstrut #1}}', 1],
+                              sfrac: ['\\smash[b]{\\mathstrut #1}',1]
+                            }
+                          }
+                    });
+                </script>
+    </head>
+
+    <body style="font-family: 'Kosugi Maru', sans-serif;">
+        <div>
+            <h2>シグモイド関数</h2>
+            シグモイド関数は以下のように定義される。
+            \[
+            y= \frac{1}{1+e^{-x}}
+            \]
+            この関数の偏微分を考える、ここで
+            \[
+            \sfrac {\frac{d}{dx}} \sfrac{\frac{1}{f(x)}}=- \frac{f'(x)}{f(x)^2}
+            \]
+            である。ここから
+            \[
+            \begin{eqnarray}
+            \frac{d}{dx} \frac{1}{1+e^{-x}}&=&- \frac{(1+e^{-x})'}{(1+e^{-x})^2} \\
+            &=&\frac{e^{-x}}{(1+e^{-x})^2} \\
+            &=&\frac{1}{1+e^{-x}} \cdot \frac{1+e^{-x}-1}{1+e^{-x}} \\
+            &=&y \cdot \left(\frac{1+e^{-x}}{1+e^{-x}}+\frac{-1}{1+e^{-x}}\right) \\
+            &=&y \cdot (1-y)
+            \end{eqnarray}
+            \]
+            となる。
+        </div>
+    </body>
+
+</html>
